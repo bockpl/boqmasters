@@ -117,6 +117,7 @@ RUN set -x \
 
 COPY slurm/munge.key /etc/munge/
 RUN chown munge:munge /etc/munge/munge.key
+RUN chmod 600 /etc/munge/munge.key
 
 COPY slurm/slurm.conf /etc/slurm/slurm.conf
 #3COPY slurm/slurmdbd.conf /etc/slurm/slurmdbd.conf
