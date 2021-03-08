@@ -213,7 +213,8 @@ ADD monit/pbis.conf /etc/monit.d/
 ADD monit/munge.conf /etc/monit.d/
 #ADD monit/slurmd.conf /etc/monit.d/
 ADD monit/slurmctld.conf /etc/monit.d/
-#ADD monit/slurmdbd.conf /etc/monit.d/
+#ADD monit/slurmdbd.conf /etc/moniti.d/
+ADD monit/jupyterhub.conf /etc/monit.d/
 #ADD monit/*.conf /etc/monit.d/
 ADD monit/stop_sshd.sh /etc/monit.d/
 ADD monit/stop_nslcd.sh /etc/monit.d/
@@ -230,6 +231,7 @@ ADD monit/start_slurmctld.sh /etc/monit.d/
 ADD monit/stop_slurmctld.sh /etc/monit.d/
 #ADD monit/start_slurmdbd.sh /etc/monit.d/
 #ADD monit/stop_slurmdbd.sh /etc/monit.d/
+ADD monit/start_jupyterhub.sh /etc/monit.d/
 #ADD monit/*.sh /etc/monit.d/
 #RUN mkdir /var/run/nslcd
 RUN chown nslcd -fR /var/run/nslcd
@@ -243,7 +245,7 @@ ENV LANG=en_US.UTF-8
 
 # Katalog w ktorymm jest uruchomiony jupyterhub, tam skladowane beda logi
 ENV JUPYTERHUB_WORKDIR=/var/run/jupyterhub
-ENV JUPYTERHUB_CONFIGDIR=/opt/software/Blueocean/Configs/jupyterhub
+ENV JUPYTERHUB_CONFIGDIR=/opt/software/Blueocean/Configs/jupyterhubs
 
 ADD start.sh /usr/local/bin/start.sh
 
