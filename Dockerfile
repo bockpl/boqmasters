@@ -173,6 +173,8 @@ ansible-playbook Playbooks/install_dep_TensorBoard.yml --connection=local --extr
 ansible-playbook Playbooks/install_dep_MatLab.yml --connection=local --extra-vars "var_host=127.0.0.1" && \
 # Instalacja narzedzi do interaktywnej wpracy w konsoli dla uzytkownikow klastra
 ansible-playbook Playbooks/install_boaccess_tools.yml --connection=local --extra-vars "var_host=127.0.0.1" && \
+# Instalacja glibc-devel dla gcc
+ansible-playbook Playbooks/install_glibc-dev.yml --connection=local --extra-vars "var_host=127.0.0.1" && \
 # Instalacja wymagan dla jupyterhub-a
 ansible-playbook Playbooks/install_dep_jupyterhub.yml --connection=local --extra-vars "var_host=127.0.0.1" && \
 # Skasowanie katalogu z playbookami
