@@ -91,6 +91,8 @@ RUN set -ex \
     && chmod +x /usr/local/bin/gosu \
     && gosu nobody true
 
+RUN chmod 755 /usr/local/bin/gosu
+
 RUN set -x \
     && git clone https://github.com/SchedMD/slurm.git \
     && pushd slurm \
