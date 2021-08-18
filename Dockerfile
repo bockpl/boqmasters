@@ -59,7 +59,9 @@ RUN set -ex \
     && yum clean all \
     && rm -rf /var/cache/yum
 
-RUN pip install --upgrade pip &&  pip3 install --upgrade pip
+#RUN pip install --upgrade pip 
+
+RUN pip3 install --upgrade pip
 
 RUN pip install Cython nose && pip3 install Cython nose
 
